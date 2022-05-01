@@ -4,7 +4,8 @@
   "description": "This is a test app for exploring socket mode with Bolt-JS and Slack.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
