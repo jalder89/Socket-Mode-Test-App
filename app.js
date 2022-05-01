@@ -11,6 +11,16 @@ const app = new App ({
 
 });
 
+//#region Message Listener
+
+app.message('hello', async ({ message, say }) => {
+    
+    // Say sends a message to the channel where the event was triggered
+    await say(`Hey there <@${message.user}>!`);
+});
+
+//#endregion
+
 (async () => {
 
     // Start your app
