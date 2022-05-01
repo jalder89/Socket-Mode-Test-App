@@ -17,7 +17,7 @@ app.message('hello', async ({ message, say }) => {
 
     // Say sends a message to the channel where the event was triggered
     await say({
-        
+
         blocks: [
             {
               "type": "section",
@@ -40,6 +40,16 @@ app.message('hello', async ({ message, say }) => {
 
 });
 
+//#endregion
+
+//#region Actions
+
+// Button click lisener
+app.action('button_click', async ({ body, ack, say }) => {
+
+    await ack();
+    await say(`<@${body.user.id}> clicked the button!`)
+})
 //#endregion
 
 (async () => {
